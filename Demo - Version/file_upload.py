@@ -68,7 +68,7 @@ def allowed_file(filename):
 def character_count(input_string):
     count = 0
     for c in input_string:
-        if c.isspace() != True:
+        if c.isspace() is not True:
             count = count + 1
     return count
 

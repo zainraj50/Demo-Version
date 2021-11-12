@@ -84,7 +84,7 @@ while True:
 
     cursor1.execute("SELECT * FROM DEMO_VERSION_1 WHERE STATUS='Pending'")#"SELECT *  FROM FINAL_VIDEO_DATA_TABLE WHERE STATUS = 'Pending'")
     data_final=cursor1.fetchone()
-    if data_final != None:
+    if data_final is not None:
         print(data_final)
         video_id=data_final[0]
         merchant_id=data_final[1] #merchant_id = store_id
@@ -115,7 +115,7 @@ while True:
         r = cursor2.fetchone()
         l=[]
         video_data_list=[]
-        if r == None:
+        if r is None:
             ai_text_data_1='No AI data available for this user text 1'
             ai_text_data_2 = 'No AI data available for this user text 2'
             ai_text_data_3 = 'No AI data available for this user text 3'
